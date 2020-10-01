@@ -86,12 +86,17 @@ for(literature_file in literature_files) {
     
     if(!is.na(inchikey)) {
       
-      # correct entries
-      metabolites$Name[i] <- correction$Name[1]
-      metabolites$Formula[i] <- correction$Formula[1]
-      metabolites$InChI[i] <- correction$InChI[1]
-      metabolites$InChIKey[i] <- correction$InChIKey[1]
-      metabolites$SMILES[i] <- correction$SMILES[1]
+      if(nrow(correction) > 0) {
+        
+        # correct entries
+        metabolites$Name[i] <- correction$Name[1]
+        metabolites$Formula[i] <- correction$Formula[1]
+        metabolites$InChI[i] <- correction$InChI[1]
+        metabolites$InChIKey[i] <- correction$InChIKey[1]
+        metabolites$SMILES[i] <- correction$SMILES[1]
+        
+      }
+
       
       # perform mapping
       ids <- wormJam_mapper(inchikey, mapper)
