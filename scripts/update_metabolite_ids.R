@@ -68,6 +68,9 @@ literature_metabolites_unique %>%
   filter(n() > 1) %>% 
   write_tsv("clipboard-16285")
 
+# write unique metabolites to file
+literature_metabolites_unique %>% write_tsv("literature_combined/unique_metabolites.txt")
+
 # read corrected list from clipboard
 corrected_metabolites <- read_tsv(clipboard())
 

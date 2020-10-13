@@ -11,7 +11,11 @@ This repository contains different folder representing the different levels of c
 
 ## Literature
 
-This folder contains metabolites curated from published <i>C. elegans</i> metabolomics and lipidomics studies. For each publication one file is provided
+This folder contains metabolites curated from published <i>C. elegans</i> metabolomics and lipidomics studies. For each publication one file is provided with metabolites and names normalized towards a standard name (mostly ChEBI).
+
+## Literature combined
+
+The folder <code>literature_combined</code> contains a list of all unique metabolites across the entire curated literature.
 
 ## Prediction
 
